@@ -5,9 +5,8 @@ import sqlite3
 import plotly.graph_objects as go
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
-
-# تحديث الصفحة تلقائياً كل 30 ثانية
-count = st_autorefresh(interval=30000, key="fizzbuzz")
+# التحديث التلقائي كل 5 دقائق (300,000 ميلي ثانية)
+st_autorefresh(interval=300000, key="baya_refresh")
 
 # الآن كود جلب سعر سولانا سيشتغل تلقائياً كل 30 ثانية
 import yfinance as yf
