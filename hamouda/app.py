@@ -4,6 +4,16 @@ import requests
 import sqlite3
 import plotly.graph_objects as go
 from datetime import datetime
+from streamlit_autorefresh import st_autorefresh
+
+# تحديث الصفحة تلقائياً كل 30 ثانية
+count = st_autorefresh(interval=30000, key="fizzbuzz")
+
+# الآن كود جلب سعر سولانا سيشتغل تلقائياً كل 30 ثانية
+import yfinance as yf
+sol = yf.Ticker("SOL-USD")
+current_price = sol.fast_info['lastPrice']
+
 # شريط أخبار ضخم ومتنوع مع مساحة إعلانية
 st.markdown("""
     <div style="background-color: #000000; padding: 15px; border-bottom: 2px solid #00f2ff; border-top: 2px solid #00f2ff; margin-bottom: 20px;">
