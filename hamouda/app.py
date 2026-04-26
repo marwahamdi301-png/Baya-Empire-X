@@ -4,18 +4,24 @@ import requests
 import sqlite3
 import plotly.graph_objects as go
 from datetime import datetime
-# كود شريط الأخبار والأسهم المتحرك
+# شريط أخبار ضخم ومتنوع مع مساحة إعلانية
 st.markdown("""
-    <div style="background-color: #0e1117; padding: 10px; border-bottom: 1px solid #00f2ff;">
-        <marquee behavior="scroll" direction="left" scrollamount="6">
-            <span style="color: #00f2ff; font-weight: bold;"> 🚀 Baya Empire Market Update: </span>
-            <span style="color: #ffffff;"> BTC: $64,230 (+1.2%) | </span>
-            <span style="color: #ffffff;"> ETH: $3,450 (-0.5%) | </span>
-            <span style="color: #ffffff;"> SOL: $145 (+2.8%) | </span>
-            <span style="color: #00f2ff; font-weight: bold;"> 📢 News: Market is looking Bullish today! </span>
+    <div style="background-color: #000000; padding: 15px; border-bottom: 2px solid #00f2ff; border-top: 2px solid #00f2ff; margin-bottom: 20px;">
+        <marquee behavior="scroll" direction="left" scrollamount="7">
+            <span style="color: #00f2ff; font-weight: bold; font-size: 18px;"> 💎 Baya Empire Live: </span>
+            <span style="color: #ffffff; font-size: 16px;"> BTC: $78,100 <span style="color: #00ff00;">▲</span> | </span>
+            <span style="color: #ffffff; font-size: 16px;"> ETH: $3,450 <span style="color: #ff0000;">▼</span> | </span>
+            <span style="color: #ffffff; font-size: 16px;"> SOL: $145 <span style="color: #00ff00;">▲</span> | </span>
+            
+            <span style="color: #ffaa00; font-weight: bold; font-size: 18px;"> 📢 NEWS: </span>
+            <span style="color: #ffffff; font-size: 16px;"> Global markets are stable today | Central banks update interest rates | New crypto regulations coming soon | </span>
+            
+            <span style="color: #ff0055; font-weight: bold; font-size: 18px;"> 🚀 ADS: </span>
+            <span style="color: #00f2ff; font-style: italic; font-size: 16px;"> Join Baya Empire VIP signals for 90% accuracy! | Limited Offer: 50% discount on Pro accounts! </span>
         </marquee>
     </div>
 """, unsafe_allow_html=True)
+
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
