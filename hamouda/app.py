@@ -16,6 +16,33 @@ st.markdown("""
         </marquee>
     </div>
 """, unsafe_allow_html=True)
+import plotly.graph_objects as go
+import pandas as pd
+import numpy as np
+from datetime import datetime
+
+# إنشاء بيانات وهمية للشموع (يمكن ربطها ببيانات حقيقية لاحقاً)
+dates = pd.date_range(start='2024-01-01', periods=20, freq='H')
+fig = go.Figure(data=[go.Candlestick(x=dates,
+                open=[78000, 78100, 78050, 78200]*5,
+                high=[78300, 78400, 78200, 78500]*5,
+                low=[77800, 77900, 78000, 78100]*5,
+                close=[78100, 78050, 78200, 78400]*5,
+                increasing_line_color= '#00f2ff', # لون الشموع الصاعدة (نيون)
+                decreasing_line_color= '#ff0055'  # لون الشموع الهابطة
+                )])
+
+# تحسين مظهر الرسم البياني ليناسب تصميمك الأسود
+fig.update_layout(
+    template='plotly_dark',
+    xaxis_rangeslider_visible=False,
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    margin=dict(l=10, r=10, t=10, b=10)
+)
+
+# عرض الرسم في ستريمليت
+st.plotly_chart(fig, use_container_width=True)
 
 # --- 1. إعدادات الصفحة ---
 st.set_page_config(page_title="Baya Empire Pro", page_icon="🛡️", layout="wide")
