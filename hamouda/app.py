@@ -22,7 +22,7 @@ import numpy as np
 from datetime import datetime
 
 # إنشاء بيانات وهمية للشموع (يمكن ربطها ببيانات حقيقية لاحقاً)
-dates = pd.date_range(start='2024-01-01', periods=20, freq='H')
+dates = pd.date_range(start='2024-01-01', periods=20, freq='h')
 fig = go.Figure(data=[go.Candlestick(x=dates,
                 open=[78000, 78100, 78050, 78200]*5,
                 high=[78300, 78400, 78200, 78500]*5,
