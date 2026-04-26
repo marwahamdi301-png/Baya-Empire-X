@@ -4,6 +4,18 @@ import requests
 import sqlite3
 import plotly.graph_objects as go
 from datetime import datetime
+# كود شريط الأخبار والأسهم المتحرك
+st.markdown("""
+    <div style="background-color: #0e1117; padding: 10px; border-bottom: 1px solid #00f2ff;">
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            <span style="color: #00f2ff; font-weight: bold;"> 🚀 Baya Empire Market Update: </span>
+            <span style="color: #ffffff;"> BTC: $64,230 (+1.2%) | </span>
+            <span style="color: #ffffff;"> ETH: $3,450 (-0.5%) | </span>
+            <span style="color: #ffffff;"> SOL: $145 (+2.8%) | </span>
+            <span style="color: #00f2ff; font-weight: bold;"> 📢 News: Market is looking Bullish today! </span>
+        </marquee>
+    </div>
+""", unsafe_allow_html=True)
 
 # --- 1. إعدادات الصفحة ---
 st.set_page_config(page_title="Baya Empire Pro", page_icon="🛡️", layout="wide")
